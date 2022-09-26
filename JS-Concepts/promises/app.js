@@ -34,7 +34,4 @@ function getPosts() {
 }
 
 createPost({title:"Post Three", body:"This is post three"})
-.then(getPosts)
-.catch(function(err) {
-    document.body.innerHTML = err;
-})
+.then(getPosts, err => document.body.innerHTML = err);
